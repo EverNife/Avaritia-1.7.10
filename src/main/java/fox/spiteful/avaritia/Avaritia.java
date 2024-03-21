@@ -2,6 +2,7 @@ package fox.spiteful.avaritia;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.MinecraftForge;
 
 import cpw.mods.fml.common.Loader;
@@ -17,6 +18,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fox.spiteful.avaritia.achievements.Achievements;
 import fox.spiteful.avaritia.blocks.LudicrousBlocks;
+import fox.spiteful.avaritia.commands.CMDAvaritiaTweakerRecipeMaker;
 import fox.spiteful.avaritia.compat.Compat;
 import fox.spiteful.avaritia.crafting.Gregorizer;
 import fox.spiteful.avaritia.crafting.Grinder;
@@ -88,5 +90,8 @@ public class Avaritia {
         Achievements.achieve();
         PotionHelper.healthInspection();
         proxy.theAfterPretty();
+        if (event.getSide() == Side.CLIENT){
+            ClientCommandHandler.instance.registerCommand(new CMDAvaritiaTweakerRecipeMaker());
+        }
     }
 }
