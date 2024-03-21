@@ -57,6 +57,7 @@ tile.block_infinity.name=Infinity Block
 tile.block_gaia.name=Gaia Block
 tile.dire_crafting.name=Dire Crafting Table
 tile.neutron_collector.name=Neutron Collector
+tile.neutron_collector_tier2.name=§bNeutron Collector Tier2
 tile.neutronium_compressor.name=Neutronium Compressor
 tile.infinitato.name=Infinitato
 tile.alfheim_deadrock0.name=Deadrock
@@ -108,6 +109,7 @@ achievement.avaritia:creative_kill.desc="By that sin fell the angels"
 # Misc
 itemGroup.avaritia=Avaritia
 container.neutron_collector=Neutron Collector
+container.neutron_collector_tier2=Neutron Collector Tier2
 container.neutronium_compressor=Neutronium Compressor
 tc.aspect.terminus=The End of Games, Apocalypse, Grindstones
 crafting.extreme=Xtreme Crafting

@@ -1,5 +1,6 @@
 package fox.spiteful.avaritia.gui;
 
+import fox.spiteful.avaritia.tile.TileEntityNeutronTier2;
 import net.minecraft.client.gui.inventory.GuiCrafting;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
@@ -24,6 +25,8 @@ public class GooeyHandler implements IGuiHandler {
         else if (ID == 2) return new GUINeutron(player.inventory, (TileEntityNeutron) world.getTileEntity(x, y, z));
         else if (ID == 3)
             return new GUICompressor(player.inventory, (TileEntityCompressor) world.getTileEntity(x, y, z));
+        else if(ID == 5)
+            return new GUINeutronTier2(player.inventory, (TileEntityNeutronTier2) world.getTileEntity(x, y, z));
         return null;
     }
 
@@ -41,6 +44,8 @@ public class GooeyHandler implements IGuiHandler {
             return new ContainerNeutron(player.inventory, (TileEntityNeutron) world.getTileEntity(x, y, z));
         else if (ID == 3)
             return new ContainerCompressor(player.inventory, (TileEntityCompressor) world.getTileEntity(x, y, z));
+        else if(ID == 5)
+            return new ContainerNeutronTier2(player.inventory, (TileEntityNeutronTier2) world.getTileEntity(x, y, z));
         return null;
     }
 }

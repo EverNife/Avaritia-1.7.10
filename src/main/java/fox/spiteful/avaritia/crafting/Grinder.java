@@ -432,6 +432,7 @@ public class Grinder {
         if (Config.darksteel && !OreDictionary.getOres("blockDarkSteel").isEmpty()) {
             catalyst.getInput().add(OreDictionary.getOres("blockDarkSteel"));
         }
+        CompressorManager.addExactRecipe(new ItemStack(LudicrousBlocks.neutron_collector_tier2), 64, new ItemStack(LudicrousBlocks.neutron_collector,1));
 
         if (Config.endStone) ExtremeCraftingManager.getInstance().addExtremeShapedOreRecipe(
                 new ItemStack(LudicrousItems.endest_pearl),

@@ -7,6 +7,8 @@ import fox.spiteful.avaritia.Config;
 import fox.spiteful.avaritia.tile.TileEntityCompressor;
 import fox.spiteful.avaritia.tile.TileEntityDireCrafting;
 import fox.spiteful.avaritia.tile.TileEntityNeutron;
+import fox.spiteful.avaritia.tile.TileEntityNeutronTier2;
+
 
 public class LudicrousBlocks {
 
@@ -19,6 +21,7 @@ public class LudicrousBlocks {
     public static Block resource_block;
     public static Block dire_crafting;
     public static Block neutron_collector;
+    public static Block neutron_collector_tier2;
     public static Block compressor;
 
     public static Block infinitato;
@@ -34,7 +37,9 @@ public class LudicrousBlocks {
         crystal_matrix = GameRegistry.registerBlock(new BlockCrystalMatrix(), "Crystal_Matrix");
         resource_block = GameRegistry.registerBlock(new BlockResource(), ItemBlockResource.class, "Resource_Block");
         neutron_collector = GameRegistry.registerBlock(new BlockNeutronCollector(), "Neutron_Collector");
+        neutron_collector_tier2 = GameRegistry.registerBlock(new BlockNeutronCollectorTier2(), "Neutron_Collector_Tier2");
         GameRegistry.registerTileEntity(TileEntityNeutron.class, "Avaritia_Neutron");
+        GameRegistry.registerTileEntity(TileEntityNeutronTier2.class, "Avaritia_Neutron_Tier2");
         compressor = GameRegistry.registerBlock(new BlockCompressor(), "Neutronium_Compressor");
         GameRegistry.registerTileEntity(TileEntityCompressor.class, "Avaritia_Compressor");
     }

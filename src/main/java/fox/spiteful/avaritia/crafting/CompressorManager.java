@@ -8,6 +8,10 @@ public class CompressorManager {
 
     private static ArrayList<CompressorRecipe> recipes = new ArrayList<CompressorRecipe>();
 
+    public static void addExactRecipe(ItemStack output, int amount, ItemStack input){
+        recipes.add(new CompressorRecipe(output, amount, input, true));
+    }
+
     public static void addRecipe(ItemStack output, int amount, ItemStack input) {
         recipes.add(new CompressorRecipe(output, amount, input));
     }
