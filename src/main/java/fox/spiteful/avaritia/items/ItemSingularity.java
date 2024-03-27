@@ -170,7 +170,7 @@ public class ItemSingularity extends Item implements IHaloRenderItem {
         if (meta == 11) {
             // tooltip.add(EnumChatFormatting.DARK_GRAY +""+ EnumChatFormatting.ITALIC +
             // StatCollector.translateToLocal("tooltip.claybalance.desc"));
-            tooltip.add(LudicrousText.makeFabulous("SELO DE QUALIDADE FINALCRAFT"));
+            tooltip.add(LudicrousText.makeFabulous("SELO DE QUALIDADE EVERNIFE"));
         }
     }
 
