@@ -17,7 +17,7 @@ import cpw.mods.fml.common.Optional;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fox.spiteful.avaritia.Avaritia;
-import gregtech.api.GregTech_API;
+import gregtech.api.GregTechAPI;
 
 public class BlockResource extends Block {
 
@@ -34,20 +34,22 @@ public class BlockResource extends Block {
         setCreativeTab(Avaritia.tab);
     }
 
-    @SideOnly(Side.CLIENT)
+    @Override
     public IIcon getIcon(int side, int metadata) {
         return this.icons[metadata % types.length];
     }
 
+    @Override
     public int damageDropped(int metadata) {
         return metadata;
     }
 
-    @SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item item, CreativeTabs tab, List list) {
+    @Override
+    public void getSubBlocks(Item item, CreativeTabs tab, List<ItemStack> list) {
         for (int x = 0; x < types.length; x++) list.add(new ItemStack(item, 1, x));
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconRegister) {
         this.icons = new IIcon[types.length];
@@ -69,16 +71,16 @@ public class BlockResource extends Block {
     @Override
     @Optional.Method(modid = "gregtech")
     public void onBlockAdded(World aWorld, int aX, int aY, int aZ) {
-        if (GregTech_API.isMachineBlock(this, aWorld.getBlockMetadata(aX, aY, aZ))) {
-            GregTech_API.causeMachineUpdate(aWorld, aX, aY, aZ);
+        if (GregTechAPI.isMachineBlock(this, aWorld.getBlockMetadata(aX, aY, aZ))) {
+            GregTechAPI.causeMachineUpdate(aWorld, aX, aY, aZ);
         }
     }
 
     @Override
     @Optional.Method(modid = "gregtech")
     public void breakBlock(World aWorld, int aX, int aY, int aZ, Block aBlock, int aMetaData) {
-        if (GregTech_API.isMachineBlock(this, aMetaData)) {
-            GregTech_API.causeMachineUpdate(aWorld, aX, aY, aZ);
+        if (GregTechAPI.isMachineBlock(this, aMetaData)) {
+            GregTechAPI.causeMachineUpdate(aWorld, aX, aY, aZ);
         }
     }
 }
