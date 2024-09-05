@@ -1,5 +1,6 @@
 package fox.spiteful.avaritia;
 
+import cpw.mods.fml.relauncher.Side;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.ClientCommandHandler;
